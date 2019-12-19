@@ -48,13 +48,13 @@ $new_text = "
 --automatically generated function to update options
 function update_opts()
     opt.read_options(user_opts, 'osc')
-    visibility_mode(user_opts.visibility, true)
     validate_user_opts()
+    visibility_mode(user_opts.visibility, true)
     request_init()
 end
 
 mp.register_script_message('update-osc-options', update_opts)
-mp.observe_property('options/script-opts',nil, update_opts)"
+mp.observe_property('options/script-opts', nil, update_opts)"
 
 Write-Host "Inserting function into osc.lua" -ForegroundColor Cyan
 $new_text | Add-Content $download_file
