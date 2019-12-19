@@ -2,13 +2,13 @@
 #it then appends some aditional code of mine to the script which allows for the layout to be changed at runtime
 
 function extractDateGit($string) {
-    $string = $string.substring(0, 10)
-    return [datetime]::ParseExact($string, 'yyyy-MM-dd', $null)
+    $string = $string -replace "T"," " -replace "Z",""
+    return [datetime]::ParseExact($string, 'yyyy-MM-dd HH:mm:ss', $null)
 }
 
 function extractDateShin($string) {
-    $string = $string.substring(5, 11)
-    return [datetime]::ParseExact($string, 'dd MMM yyyy', $null)
+    $string = $string -replace " UT",""
+    return [datetime]::ParseExact($string, 'ddd, dd MMM yyyy HH:mm:ss', $null)
 }
 
 Write-Host "Updating latest version of osc.lua" -ForegroundColor Cyan
@@ -23,20 +23,21 @@ $oscCommits = Invoke-Webrequest -uri "https://api.github.com/repos/mpv-player/mp
 $oscCommits = ($oscCommits.Content | ConvertFrom-Json)
 
 #grabs the date of the latest commits and shin builds
-$oscdate = extractDateGit($oscCommits[0].commit.committer.date)
+$oscDate = extractDateGit($oscCommits[0].commit.committer.date)
 $latestShin = extractDateShin($shinBuilds[0].pubDate)
 $commit = "master"
 
 #moves back through the commits until one is found that predates the latest shin build
-for ($i = 1; $oscdate -gt $latestShin; $i++) {
+for ($i = 1; $oscDate -gt $latestShin; $i++) {
     if ($i-eq 1) {
         Write-Host ('latest osc.lua is newer that the current compiled mpv build, looking for previous version') -ForegroundColor Cyan
     }
     $commit = $oscCommits[$i].sha
+    Write-Host $oscDate - 'too recent' -ForegroundColor Cyan
     $oscDate = extractDateGit($oscCommits[$i].commit.committer.date)
 }
 
-Write-Host "Using commit from " - $oscDate.ToShortDateString() -ForegroundColor Green
+Write-Host "Using commit from" - $oscDate -ForegroundColor Green
 $download_file = (Get-Location).Path + "\portable_config\scripts\osc.lua"
 
 Write-Host "Downloading osc.lua from https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -ForegroundColor Green
