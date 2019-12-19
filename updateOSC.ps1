@@ -1,5 +1,5 @@
-#downloads the latest version of osc.lua that was committed before the latest shinchiro build
-#then appends the updateOptions function to the file
+#this script is for automatically updating a copy of osc.lua from the mpv git repository
+#it then appends some aditional code of mine the the script which allows for the layout to be changed at runtime
 
 function extractDateGit($string) {
     $string = $string.substring(0, 10)
