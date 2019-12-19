@@ -8,18 +8,17 @@ function extractDateGit($string) {
 
 function extractDateShin($string) {
     $string = $string.substring(5, 11)
-    Write-Host $string
     return [datetime]::ParseExact($string, 'dd MMM yyyy', $null)
 }
 
-Write-Host "Updating latest version of osc.lua" -ForegroundColor Blue
+Write-Host "Updating latest version of osc.lua" -ForegroundColor Cyan
 
 Write-Host "Fetching latest rss feed for Shinchiro builds from: https://sourceforge.net/projects/mpv-player-windows/rss?path=/64bit" -ForegroundColor Green
 $shinBuilds = [xml](New-Object System.Net.WebClient).DownloadString("https://sourceforge.net/projects/mpv-player-windows/rss?path=/64bit")
 $shinBuilds = $shinBuilds.rss.channel.item
 
 #fetching commits from github and converting them into a powershell object
-Write-Host "Fetching commits for osc.lua from: https://api.github.com/repos/mpv-player/mpv/commits?path=player/lua/osc.lua"
+Write-Host "Fetching commits for osc.lua from: https://api.github.com/repos/mpv-player/mpv/commits?path=player/lua/osc.lua" -ForegroundColor Green
 $oscCommits = invoke-webrequest -uri "https://api.github.com/repos/mpv-player/mpv/commits?path=player/lua/osc.lua"
 $oscCommits = ($oscCommits.Content | ConvertFrom-Json)
 
@@ -31,13 +30,13 @@ $commit = "master"
 #moves back through the commits until one is found that predates the latest shin build
 for ($i = 1; $oscdate -gt $latestShin; $i++) {
     if ($i-eq 1) {
-        Write-Host ('latest osc.lua is newer that the current compiled mpv build, looking for previous version') -ForegroundColor Blue
+        Write-Host ('latest osc.lua is newer that the current compiled mpv build, looking for previous version') -ForegroundColor Cyan
     }
     $commit = $oscCommits[$i].sha
     $oscDate = extractDateGit($oscCommits[$i].commit.committer.date)
 }
 
-
+Write-Host "Using commit from " - $oscDate.ToShortDateString() -ForegroundColor Green
 $download_file = (Get-Location).Path + "\portable_config\scripts\osc.lua"
 
 Write-Host "Downloading osc.lua from https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -ForegroundColor Green
@@ -54,7 +53,7 @@ end
 
 mp.register_script_message('update-osc-options', update_opts)"
 
-Write-Host "Inserting function into osc.lua" -ForegroundColor Blue
+Write-Host "Inserting function into osc.lua" -ForegroundColor Cyan
 $new_text | Add-Content $download_file
 
 Write-Host "osc.lua updated" -ForegroundColor Magenta
