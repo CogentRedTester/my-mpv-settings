@@ -1,4 +1,4 @@
-$download_file = (Get-Location).Path + "\scripts\oscAuto.lua"
+$download_file = (Get-Location).Path + "\scripts\osc.lua"
 
 Write-Host "Downloading osc.lua from https://raw.githubusercontent.com/mpv-player/mpv/master/player/lua/osc.lua" -ForegroundColor Green
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mpv-player/mpv/master/player/lua/osc.lua" -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox -OutFile $download_file
