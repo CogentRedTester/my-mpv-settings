@@ -52,7 +52,8 @@ function update_opts()
     request_init()
 end
 
-mp.register_script_message('update-osc-options', update_opts)"
+mp.register_script_message('update-osc-options', update_opts)
+mp.observe_property('options/script-opts',nil, update_opts)"
 
 Write-Host "Inserting function into osc.lua" -ForegroundColor Cyan
 $new_text | Add-Content $download_file
