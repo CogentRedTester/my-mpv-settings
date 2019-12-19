@@ -19,7 +19,7 @@ $shinBuilds = $shinBuilds.rss.channel.item
 
 #fetching commits from github and converting them into a powershell object
 Write-Host "Fetching commits for osc.lua from: https://api.github.com/repos/mpv-player/mpv/commits?path=player/lua/osc.lua" -ForegroundColor Green
-$oscCommits = invoke-webrequest -uri "https://api.github.com/repos/mpv-player/mpv/commits?path=player/lua/osc.lua"
+$oscCommits = Invoke-Webrequest -uri "https://api.github.com/repos/mpv-player/mpv/commits?path=player/lua/osc.lua" -UseBasicParsing -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox
 $oscCommits = ($oscCommits.Content | ConvertFrom-Json)
 
 #grabs the date of the latest commits and shin builds
@@ -40,7 +40,7 @@ Write-Host "Using commit from " - $oscDate.ToShortDateString() -ForegroundColor 
 $download_file = (Get-Location).Path + "\portable_config\scripts\osc.lua"
 
 Write-Host "Downloading osc.lua from https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -ForegroundColor Green
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox -OutFile $download_file
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -UseBasicParsing -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox -OutFile $download_file
 
 $new_text = "
 
