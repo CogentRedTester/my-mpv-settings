@@ -1,5 +1,5 @@
 #this script is for automatically updating a copy of osc.lua from the mpv git repository
-#it then appends some aditional code of mine the the script which allows for the layout to be changed at runtime
+#it then appends some aditional code of mine to the script which allows for the layout to be changed at runtime
 
 function extractDateGit($string) {
     $string = $string.substring(0, 10)
