@@ -4,6 +4,10 @@
 #change this value to show the path to osc.lua relative to the execution directory
 $relative_path = "\scripts\osc.lua"
 
+#uploads changes to git
+#run this script from within the git repository or it will not work
+$upload_to_git = $true
+
 function extractDateGit($string) {
     #powershell 6 automatically converts to a datetime object, if that is the case we can't try to reconvert it
     if ($string.GetType() -eq [system.datetime]) {
@@ -69,6 +73,28 @@ Write-Host "Inserting function into osc.lua" -ForegroundColor Cyan
 $new_text | Add-Content $download_file
 
 Write-Host "osc.lua updated" -ForegroundColor Magenta
+
+Write-Host ""
+
+if ($upload_to_git) {
+    Write-Host "Uploading changes to git" -ForegroundColor Green
+
+    $relative_path = $relative_path -Replace '\\', '/'
+    $relative_path = $relative_path.Substring(1, $relative_path.length - 1)
+
+    git add $relative_path
+    
+    if ($commit -eq "master"){
+        $commit = $oscCommits[0].sha
+    }
+    $commitMessage = "updated osc.lua to version $commit"
+
+    Write-Host "commit message: $commitMessage" -ForegroundColor Cyan
+    git commit -m $commitMessage
+
+    Write-Host "Run 'git push' to upload changes" -ForegroundColor Magenta
+
+}
 
 write-host "Press any key to continue..."
 [void][System.Console]::ReadKey($true)
