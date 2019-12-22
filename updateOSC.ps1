@@ -5,6 +5,11 @@
 $relative_path = "\scripts\osc.lua"
 
 function extractDateGit($string) {
+    #powershell 6 automatically converts to a datetime object, if that is the case we can't try to reconvert it
+    if ($string.GetType() -eq [system.datetime]) {
+        return $string
+    }
+
     $string = $string -replace "T"," " -replace "Z",""
     return [datetime]::ParseExact($string, 'yyyy-MM-dd HH:mm:ss', $null)
 }
@@ -22,7 +27,7 @@ $shinBuilds = $shinBuilds.rss.channel.item
 
 #fetching commits from github and converting them into a powershell object
 Write-Host "Fetching commits for osc.lua from: https://api.github.com/repos/mpv-player/mpv/commits?path=player/lua/osc.lua" -ForegroundColor Green
-$oscCommits = Invoke-Webrequest -uri "https://api.github.com/repos/mpv-player/mpv/commits?path=player/lua/osc.lua" -UseBasicParsing -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox
+$oscCommits = Invoke-WebRequest -uri "https://api.github.com/repos/mpv-player/mpv/commits?path=player/lua/osc.lua" -UseBasicParsing
 $oscCommits = ($oscCommits.Content | ConvertFrom-Json)
 
 #grabs the date of the latest commits and shin builds
@@ -44,7 +49,7 @@ Write-Host "Using commit from" - $oscDate -ForegroundColor Green
 $download_file = (Get-Location).Path + $relative_path
 
 Write-Host "Downloading osc.lua from https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -ForegroundColor Green
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -UseBasicParsing -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox -OutFile $download_file
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -UseBasicParsing -OutFile $download_file
 
 Write-Host "Saved to: $download_file" -ForegroundColor Cyan
 $new_text = "
