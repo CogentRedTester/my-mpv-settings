@@ -59,8 +59,15 @@ Write-Host "Saved to: $download_file" -ForegroundColor Cyan
 $new_text = "
 
 --automatically generated function to update options
+local prev_opts = utils.to_string(user_opts)
 function update_opts()
     opt.read_options(user_opts, 'osc')
+
+    if utils.to_string(user_opts) == prev_opts then
+        return
+    end
+    prev_opts = utils.to_string(user_opts)
+
     validate_user_opts()
     visibility_mode(user_opts.visibility, true)
     request_init()
