@@ -1,6 +1,9 @@
 #this script is for automatically updating a copy of osc.lua from the mpv git repository
 #it then appends some aditional code of mine to the script which allows for the layout to be changed at runtime
 
+#change this value to show the path to osc.lua relative to the execution directory
+$relative_path = "\scripts\osc.lua"
+
 function extractDateGit($string) {
     $string = $string -replace "T"," " -replace "Z",""
     return [datetime]::ParseExact($string, 'yyyy-MM-dd HH:mm:ss', $null)
@@ -38,11 +41,12 @@ for ($i = 1; $oscDate -gt $latestShin; $i++) {
 }
 
 Write-Host "Using commit from" - $oscDate -ForegroundColor Green
-$download_file = (Get-Location).Path + "\portable_config\scripts\osc.lua"
+$download_file = (Get-Location).Path + $relative_path
 
 Write-Host "Downloading osc.lua from https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -ForegroundColor Green
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/mpv-player/mpv/$commit/player/lua/osc.lua" -UseBasicParsing -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox -OutFile $download_file
 
+Write-Host "Saved to: $download_file" -ForegroundColor Cyan
 $new_text = "
 
 --automatically generated function to update options
@@ -60,3 +64,6 @@ Write-Host "Inserting function into osc.lua" -ForegroundColor Cyan
 $new_text | Add-Content $download_file
 
 Write-Host "osc.lua updated" -ForegroundColor Magenta
+
+write-host "Press any key to continue..."
+[void][System.Console]::ReadKey($true)
