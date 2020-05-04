@@ -1,4 +1,0 @@
-[submodule "mpv-scripts"]
-	path = scripts
-	url = git@github.com:CogentRedTester/mpv-scripts.git
-    branch = master
