@@ -1,0 +1,3 @@
+[submodule "mpv-scripts"]
+	path = my-scripts
+	url = git@github.com:CogentRedTester/mpv-scripts.git
