@@ -1,4 +1,9 @@
 [submodule "mpv-scripts"]
-	path = scripts
+	path = my-scripts
 	url = git@github.com:CogentRedTester/mpv-scripts.git
-    branch = master
+[submodule "other-scripts/mpv-playlistmanager"]
+	path = other-scripts/mpv-playlistmanager
+	url = git@github.com:jonniek/mpv-playlistmanager.git
+[submodule "other-scripts/mpv-nextfile"]
+	path = other-scripts/mpv-nextfile
+	url = git@github.com:jonniek/mpv-nextfile.git
