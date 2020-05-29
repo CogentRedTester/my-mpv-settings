@@ -24,6 +24,10 @@
         "command": ["script-message","reload-session"]
     },
     {
+        "label": "Search Keybinds",
+        "command": ["script-message-to","search_keybinds","search-keybinds"]
+    },
+    {
         "label": "1920x1080 60Hz",
         "command": ["script-message","change-refresh","1920","1080","60"]
     },
