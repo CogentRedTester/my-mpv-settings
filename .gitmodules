@@ -7,3 +7,6 @@
 [submodule "other-scripts/mpv-nextfile"]
 	path = other-scripts/mpv-nextfile
 	url = git@github.com:jonniek/mpv-nextfile.git
+[submodule "other-scripts/mpv-menu"]
+	path = other-scripts/mpv-menu
+	url = git@github.com:jonniek/mpv-menu.git

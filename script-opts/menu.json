@@ -1,0 +1,43 @@
+[
+    {
+        "label": "Close Menu",
+        "command": ["ignore"]
+    },
+    {
+        "label": "Shuffle Playlist",
+        "command": ["script-binding","shuffleplaylist"]
+    },
+    {
+        "label": "Sort Playlist",
+        "command": ["script-binding","sortplaylist"]
+    },
+    {
+        "label": "Save Playlist",
+        "command": ["script-binding","saveplaylist"]
+    },
+    {
+        "label": "Clean Playlist",
+        "command": ["script-message", "clean-playlist"]
+    },
+    {
+        "label": "Load Previous Session",
+        "command": ["script-message","reload-session"]
+    },
+    {
+        "label": "1920x1080 60Hz",
+        "command": ["script-message","change-refresh","1920","1080","60"]
+    },
+    {
+        "label": "1920x1080 75Hz",
+        "command": ["script-message","change-refresh","1920","1080","75"]
+    },
+    {
+      "label": "quit",
+      "command": ["quit"]
+    },
+    {
+        "label": "watch later",
+        "command": ["quit-watch-later"]
+    }
+]
+  
