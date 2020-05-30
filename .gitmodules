@@ -10,3 +10,6 @@
 [submodule "other-scripts/mpv-menu"]
 	path = other-scripts/mpv-menu
 	url = git@github.com:jonniek/mpv-menu.git
+[submodule "other-scripts/mpv-search-page"]
+	path = other-scripts/mpv-search-page
+	url = git@github.com:CogentRedTester/mpv-search-page.git
