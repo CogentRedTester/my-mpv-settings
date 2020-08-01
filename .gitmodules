@@ -16,3 +16,6 @@
 [submodule "other-scripts/mpv-coverart"]
 	path = other-scripts/mpv-coverart
 	url = https://github.com/CogentRedTester/mpv-coverart
+[submodule "other-scripts/mpv-changerefresh"]
+	path = other-scripts/mpv-changerefresh
+	url = git@github.com:CogentRedTester/mpv-changerefresh.git
