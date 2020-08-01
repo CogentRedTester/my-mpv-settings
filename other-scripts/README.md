@@ -1,6 +1,8 @@
 # Other Scripts
 
-These scripts are ones I use, but didn't write.
+These scripts are for independant github repositories, some of these I wrote or moved to separate repositories after they became too big. Others are made by others.
+
+The following scripts are not mine:
 
 ## [playlistmanager](https://github.com/jonniek/mpv-playlistmanager)
 

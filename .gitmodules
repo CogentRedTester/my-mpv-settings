@@ -13,3 +13,6 @@
 [submodule "other-scripts/mpv-search-page"]
 	path = other-scripts/mpv-search-page
 	url = git@github.com:CogentRedTester/mpv-search-page.git
+[submodule "other-scripts/mpv-coverart"]
+	path = other-scripts/mpv-coverart
+	url = https://github.com/CogentRedTester/mpv-coverart
