@@ -19,3 +19,9 @@
 [submodule "other-scripts/mpv-changerefresh"]
 	path = other-scripts/mpv-changerefresh
 	url = git@github.com:CogentRedTester/mpv-changerefresh.git
+[submodule "other-scripts/mpv-webtorrent-hook"]
+	path = other-scripts/mpv-webtorrent-hook
+	url = git@github.com:noctuid/mpv-webtorrent-hook.git
+[submodule "other-scripts/mpv-file-browser"]
+	path = other-scripts/mpv-file-browser
+	url = git@github.com:CogentRedTester/mpv-file-browser.git
