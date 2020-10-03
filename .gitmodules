@@ -25,3 +25,6 @@
 [submodule "other-scripts/mpv-file-browser"]
 	path = other-scripts/mpv-file-browser
 	url = git@github.com:CogentRedTester/mpv-file-browser.git
+[submodule "other-scripts/mpv-dvd-menu"]
+	path = other-scripts/mpv-dvd-menu
+	url = git@github.com:CogentRedTester/mpv-dvd-menu.git
