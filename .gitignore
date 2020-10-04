@@ -3,3 +3,4 @@ watch_later/*
 playlists/*
 scripts/*
 script-opts/dvd_browser.conf
+device.conf
