@@ -28,3 +28,6 @@
 [submodule "other-scripts/mpv-dvd-browser"]
 	path = other-scripts/mpv-dvd-browser
 	url = git@github.com:CogentRedTester/mpv-dvd-browser.git
+[submodule "other-scripts/mpv-scroll-list"]
+	path = other-scripts/mpv-scroll-list
+	url = git@github.com:CogentRedTester/mpv-scroll-list.git
