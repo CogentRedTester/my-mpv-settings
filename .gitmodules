@@ -31,3 +31,6 @@
 [submodule "other-scripts/mpv-scroll-list"]
 	path = other-scripts/mpv-scroll-list
 	url = git@github.com:CogentRedTester/mpv-scroll-list.git
+[submodule "other-scripts/mpv-sub-select"]
+	path = other-scripts/mpv-sub-select
+	url = git@github.com:CogentRedTester/mpv-sub-select.git
