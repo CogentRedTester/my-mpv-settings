@@ -1,5 +1,14 @@
 [
     {
+        "alang": "*",
+        "slang": "forced"
+    },
+    {
+        "alang": "j[ap]n?",
+        "slang": "eng?",
+        "blacklist": [ "sign" ]
+    },
+    {
         "alang": "eng?",
         "slang": "eng?",
         "whitelist": [ "sign", "song"]
@@ -9,14 +18,8 @@
         "slang": "no"
     },
     {
-        "alang": "jpn",
-        "slang": "eng?",
-        "blacklist": [ "sign" ]
-    },
-    {
-        "alang": "ja",
-        "slang": "eng?",
-        "blacklist": [ "sign" ]
+        "alang": "no",
+        "slang": "no"
     },
     {
         "alang": "*",
