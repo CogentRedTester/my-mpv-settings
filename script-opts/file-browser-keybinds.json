@@ -1,8 +1,7 @@
 [
     {
-        "key": "Alt+ENTER",
-        "command": ["sub-add", "%f"],
-        "filter": "file"
+        "key": "Ctrl+Shift+ENTER",
+        "command": ["run", "powershell", "-command", "mpv.exe", "%F"]
     },
     {
         "key": "Ctrl+c",
@@ -20,5 +19,23 @@
         "key": "Ctrl+O",
         "command": ["run", "powershell", "-command", "explorer.exe", "(( %F ).TrimEnd('/') -replace '/', '\\' )"],
         "filter": "dir"
+    },
+    {
+        "key": "Alt+o",
+        "command": [
+            ["script-binding", "file_browser/dynamic/1/close"],
+            ["script-message", "type", "script-message browse-directory \"\" \n; script-binding console/_console_1", "34"]
+        ],
+        "multiselect": false
+    },
+    {
+        "key": "INS",
+        "command": ["run", "powershell", "-command", "Add-Content", "-LiteralPath", "( %P + '/.ordered-chapters.m3u' )", "-Value", "%N"],
+        "multiselect": false
+    },
+    {
+        "key": "Ctrl+INS",
+        "command": ["run", "powershell", "-command", "rm", "-LiteralPath", "( %P + '/.ordered-chapters.m3u' )", "-Force"],
+        "multiselect": false
     }
 ]
