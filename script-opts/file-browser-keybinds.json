@@ -8,7 +8,18 @@
         "command": [
             ["run", "powershell", "-command", "Set-Clipboard", "%F"],
             ["print-text", "copied filepath to clipboard"]
-        ]
+        ],
+        "delay": 0.3
+    },
+    {
+        "key": "Ctrl+v",
+        "command": ["run", "powershell", "-command", "cp", "-LiteralPath", "(Get-Clipboard)", "%P"],
+        "multiselect": false
+    },
+    {
+        "key": "Ctrl+x",
+        "command": ["run", "powershell", "-command", "mv", "-LiteralPath", "(Get-Clipboard)", "%P"],
+        "multiselect": false
     },
     {
         "key": "Ctrl+o",
@@ -30,12 +41,31 @@
     },
     {
         "key": "INS",
-        "command": ["run", "powershell", "-command", "Add-Content", "-LiteralPath", "( %P + '/.ordered-chapters.m3u' )", "-Value", "%N"],
-        "multiselect": false
+        "command": ["run", "powershell", "-command", "Set-Content", "-LiteralPath", "( %P + '/.ordered-chapters.m3u' )", "-Value", "( %N )"],
+        "multi-type": "append",
+        "append-string": "+'\n'+"
     },
     {
         "key": "Ctrl+INS",
         "command": ["run", "powershell", "-command", "rm", "-LiteralPath", "( %P + '/.ordered-chapters.m3u' )", "-Force"],
         "multiselect": false
+    },
+    {
+        "key": "KP1",
+        "command": ["print-text", "file: %f"],
+        "multi-type": "append",
+        "append-string": "\n"
+    },
+    {
+        "key": "KP2",
+        "command": ["print-text", "name: %n"]
+    },
+    {
+        "key": "KP3",
+        "command": ["print-text", "open directory: %p"]
+    },
+    {
+        "key": "KP4",
+        "command": ["print-text", "directory name: %d"]
     }
 ]
