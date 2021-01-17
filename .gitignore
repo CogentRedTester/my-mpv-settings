@@ -2,6 +2,12 @@
 watch_later/*
 playlists/*
 scripts/*
+repos
 script-opts/dvd_browser.conf
 script-opts/file_browser.conf
 device.conf
+
+shaders/*
+!FSRCNNX_x2_8-0-4-1.glsl
+!noise_static_chroma.hook
+!noise_static_luma.hook

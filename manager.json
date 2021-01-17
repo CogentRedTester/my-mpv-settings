@@ -1,0 +1,74 @@
+[
+    {
+        "git": "git@github.com:CogentRedTester/mpv_manager.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua",
+        "branch": "flatten-folders"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-scripts.git",
+        "dest": "~~/scripts",
+        "whitelist": "after%-playback.lua|cycle%-commands.lua|editions%-notification.lua|ftp%-compat.lua|keep%-session.lua|music%-mode.lua|onedrive%-hook.lua|ordered%-chapters%-playlist.lua|playlist%-shuffle.lua|profile%-command.lua|syncplay%-compat.lua|temp%-profiles.lua"
+    },
+    {
+        "git": "git@github.com:jonniek/mpv-playlistmanager.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua"
+    },
+    {
+        "git": "git@github.com:jonniek/mpv-menu.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-search-page.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua",
+        "branch": "custom-keybindings"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-coverart.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-changerefresh.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-file-browser.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua",
+        "flatten_folders": true
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-dvd-browser.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-sub-select.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-scroll-list.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua",
+        "flatten_folders": true
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-user-input.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua"
+    },
+    {
+        "git": "https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10",
+        "dest": "~~/shaders"
+    },
+    {
+        "git": "https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637",
+        "dest": "~~/shaders"
+    }
+]
