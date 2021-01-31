@@ -11,3 +11,5 @@ shaders/*
 !FSRCNNX_x2_8-0-4-1.glsl
 !noise_static_chroma.hook
 !noise_static_luma.hook
+
+.gitmodules

@@ -3,12 +3,14 @@
         "git": "git@github.com:CogentRedTester/mpv_manager.git",
         "dest": "~~/scripts",
         "whitelist": "%.lua",
-        "branch": "flatten-folders"
+        "branch": "local-repo-support",
+        "local_repo": "~~/repos/mpv_manager"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-scripts.git",
         "dest": "~~/scripts",
-        "whitelist": "after%-playback.lua|cycle%-commands.lua|editions%-notification.lua|ftp%-compat.lua|keep%-session.lua|music%-mode.lua|onedrive%-hook.lua|ordered%-chapters%-playlist.lua|playlist%-shuffle.lua|profile%-command.lua|syncplay%-compat.lua|temp%-profiles.lua"
+        "whitelist": "after%-playback.lua|cycle%-commands.lua|editions%-notification.lua|ftp%-compat.lua|keep%-session.lua|music%-mode.lua|onedrive%-hook.lua|ordered%-chapters%-playlist.lua|playlist%-shuffle.lua|profile%-command.lua|save%-playlist.lua|syncplay%-compat.lua|temp%-profiles.lua",
+        "local_repo": "~~/repos/mpv-scripts"
     },
     {
         "git": "git@github.com:jonniek/mpv-playlistmanager.git",
@@ -24,28 +26,33 @@
         "git": "git@github.com:CogentRedTester/mpv-search-page.git",
         "dest": "~~/scripts",
         "whitelist": "%.lua",
-        "branch": "custom-keybindings"
+        "branch": "user-input",
+        "local_repo": "~~/repos/mpv-search-page"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-coverart.git",
         "dest": "~~/scripts",
-        "whitelist": "%.lua"
+        "whitelist": "%.lua",
+        "local_repo": "~~/repos/mpv-coverart"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-changerefresh.git",
         "dest": "~~/scripts",
-        "whitelist": "%.lua"
+        "whitelist": "%.lua",
+        "local_repo": "~~/repos/mpv-changerefresh"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-file-browser.git",
         "dest": "~~/scripts",
         "whitelist": "%.lua",
-        "flatten_folders": true
+        "flatten_folders": true,
+        "local_repo":"~~/repos/mpv-file-browser"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-dvd-browser.git",
         "dest": "~~/scripts",
-        "whitelist": "%.lua"
+        "whitelist": "%.lua",
+        "local_repo": "~~/repos/mpv-dvd-browser"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-sub-select.git",
@@ -54,14 +61,28 @@
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-scroll-list.git",
+        "dest": "~~/script-modules",
+        "whitelist": "scroll%-list%.lua",
+        "local_repo": "~~/repos/mpv-scroll-list"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-scroll-list.git",
         "dest": "~~/scripts",
-        "whitelist": "%.lua",
-        "flatten_folders": true
+        "whitelist": "examples/.+%.lua",
+        "flatten_folders": true,
+        "local_repo": "~~/repos/mpv-scroll-list"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-user-input.git",
         "dest": "~~/scripts",
-        "whitelist": "%.lua"
+        "whitelist": "user%-input%.lua",
+        "local_repo": "~~/repos/mpv-user-input"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-user-input.git",
+        "dest": "~~/script-modules",
+        "whitelist": "user%-input%-module.lua",
+        "local_repo": "~~/repos/mpv-user-input"
     },
     {
         "git": "https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10",
