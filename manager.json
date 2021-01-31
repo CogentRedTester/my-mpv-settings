@@ -20,6 +20,7 @@
     {
         "git": "git@github.com:CogentRedTester/mpv-menu.git",
         "dest": "~~/scripts",
+        "branch": "scroll-list",
         "whitelist": "%.lua",
         "local_repo": "~~/repos/mpv-menu"
     },
