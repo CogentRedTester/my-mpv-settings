@@ -1,7 +1,9 @@
 [
     {
-        "key": "Ctrl+Shift+ENTER",
-        "command": ["run", "powershell", "-command", "mpv.exe", "%F"]
+        "key": "Ctrl+ENTER",
+        "command": ["run", "powershell", "-command", "mpv.exe", "%F"],
+        "multiselect": true,
+        "multi-type": "append"
     },
     {
         "key": "Ctrl+c",
@@ -9,6 +11,7 @@
             ["run", "powershell", "-command", "Set-Clipboard", "%F"],
             ["print-text", "copied filepath to clipboard"]
         ],
+        "multiselect": true,
         "delay": 0.3
     },
     {
@@ -29,19 +32,13 @@
     {
         "key": "Ctrl+O",
         "command": ["run", "powershell", "-command", "explorer.exe", "(( %F ).TrimEnd('/') -replace '/', '\\' )"],
-        "filter": "dir"
-    },
-    {
-        "key": "Alt+o",
-        "command": [
-            ["script-binding", "file_browser/dynamic/1/close"],
-            ["script-message", "type", "script-message browse-directory \"\" \n; script-binding console/_console_1", "34"]
-        ],
-        "multiselect": false
+        "filter": "dir",
+        "multiselect": true
     },
     {
         "key": "INS",
         "command": ["run", "powershell", "-command", "Set-Content", "-LiteralPath", "( %P + '/.ordered-chapters.m3u' )", "-Value", "( %N )"],
+        "multiselect": true,
         "multi-type": "append",
         "append-string": "+'\n'+"
     },
@@ -51,14 +48,29 @@
         "multiselect": false
     },
     {
+        "key": "p",
+        "command": ["script-message-to", "save_playlist", "save-playlist", "%p", ""]
+    },
+    {
+        "key": "P",
+        "command": ["script-message-to", "save_playlist", "save-playlist", "%p", "", "relative"]
+    },
+
+
+
+    {
         "key": "KP1",
-        "command": ["print-text", "file: %f"],
+        "command": ["print-text", "files: %n"],
+        "multiselect": true,
         "multi-type": "append",
         "append-string": "\n"
     },
     {
         "key": "KP2",
-        "command": ["print-text", "name: %n"]
+        "command": ["print-text", "directories: %n"],
+        "multiselect": true,
+        "multi-type": "append",
+        "append-string": "\n"
     },
     {
         "key": "KP3",
