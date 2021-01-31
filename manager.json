@@ -20,7 +20,8 @@
     {
         "git": "git@github.com:jonniek/mpv-menu.git",
         "dest": "~~/scripts",
-        "whitelist": "%.lua"
+        "whitelist": "%.lua",
+        "local_repo": "~~/repos/mpv-menu"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-search-page.git",

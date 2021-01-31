@@ -1,21 +1,5 @@
 [
     {
-        "label": "Close Menu",
-        "command": ["ignore"]
-    },
-    {
-        "label": "Shuffle Playlist",
-        "command": ["script-binding","shuffleplaylist"]
-    },
-    {
-        "label": "Sort Playlist",
-        "command": ["script-binding","sortplaylist"]
-    },
-    {
-        "label": "Save Playlist",
-        "command": ["script-binding","saveplaylist"]
-    },
-    {
         "label": "Clean Playlist",
         "command": ["script-message", "clean-playlist"]
     },
@@ -24,8 +8,12 @@
         "command": ["script-message","reload-session"]
     },
     {
-        "label": "Search Keybinds",
-        "command": ["script-message-to","search_keybinds","search-keybinds"]
+        "label": "Save Session to Shared Drive",
+        "command": ["script-message","save-session", "Z:/Oscar - Files/"]
+    },
+    {
+        "label": "Load Session From Shared Drive",
+        "command": ["script-message","reload-session", "Z:/Oscar - Files/"]
     },
     {
         "label": "1920x1080 60Hz",
@@ -36,12 +24,8 @@
         "command": ["script-message","change-refresh","1920","1080","75"]
     },
     {
-      "label": "quit",
-      "command": ["quit"]
-    },
-    {
-        "label": "watch later",
-        "command": ["quit-watch-later"]
+        "label": "Update Scripts",
+        "command": ["script-binding", "manager-update-all"]
     }
 ]
   
