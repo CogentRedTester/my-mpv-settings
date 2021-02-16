@@ -13,3 +13,4 @@ shaders/*
 !noise_static_luma.hook
 
 .gitmodules
+script-opts/file_browser_favourites

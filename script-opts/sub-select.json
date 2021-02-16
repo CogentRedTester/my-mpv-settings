@@ -19,11 +19,7 @@
         "whitelist": [ "sign", "song"]
     },
     {
-        "alang": "eng?",
-        "slang": "no"
-    },
-    {
-        "alang": "no",
+        "alang": ["eng?", "no"],
         "slang": "no"
     },
     {

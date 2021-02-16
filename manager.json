@@ -13,11 +13,6 @@
         "local_repo": "~~/repos/mpv-scripts"
     },
     {
-        "git": "git@github.com:jonniek/mpv-playlistmanager.git",
-        "dest": "~~/scripts",
-        "whitelist": "%.lua"
-    },
-    {
         "git": "git@github.com:CogentRedTester/mpv-menu.git",
         "dest": "~~/scripts",
         "branch": "scroll-list",
@@ -38,15 +33,15 @@
         "local_repo": "~~/repos/mpv-coverart"
     },
     {
-        "git": "git@github.com:CogentRedTester/mpv-changerefresh.git",
+        "git": "git@github.com:CogentRedTester/mpv-file-browser.git",
         "dest": "~~/scripts",
-        "whitelist": "%.lua",
-        "local_repo": "~~/repos/mpv-changerefresh"
+        "whitelist": "file%-browser%.lua",
+        "local_repo":"~~/repos/mpv-file-browser"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-file-browser.git",
-        "dest": "~~/scripts",
-        "whitelist": "%.lua",
+        "dest": "~~/script-modules/file-browser-addons/",
+        "whitelist": "addons/ftp|addons/http|addons/favourites|addons/m3u|addons/powershell",
         "flatten_folders": true,
         "local_repo":"~~/repos/mpv-file-browser"
     },
@@ -59,7 +54,8 @@
     {
         "git": "git@github.com:CogentRedTester/mpv-sub-select.git",
         "dest": "~~/scripts",
-        "whitelist": "%.lua"
+        "whitelist": "%.lua",
+        "local_repo": "~~/repos/mpv-sub-select"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-scroll-list.git",
@@ -85,6 +81,17 @@
         "dest": "~~/script-modules",
         "whitelist": "user%-input%-module.lua",
         "local_repo": "~~/repos/mpv-user-input"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-changerefresh.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua",
+        "local_repo": "~~/repos/mpv-changerefresh"
+    },
+    {
+        "git": "git@github.com:jonniek/mpv-playlistmanager.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua"
     },
     {
         "git": "https://gist.github.com/igv/36508af3ffc84410fe39761d6969be10",
