@@ -9,7 +9,7 @@
     {
         "git": "git@github.com:CogentRedTester/mpv-scripts.git",
         "dest": "~~/scripts",
-        "whitelist": "after%-playback.lua|cycle%-commands.lua|editions%-notification.lua|ftp%-compat.lua|keep%-session.lua|music%-mode.lua|onedrive%-hook.lua|ordered%-chapters%-playlist.lua|playlist%-shuffle.lua|profile%-command.lua|save%-playlist.lua|syncplay%-compat.lua|temp%-profiles.lua",
+        "whitelist": "after%-playback.lua|cycle%-commands.lua|editions%-notification.lua|ftp%-compat.lua|input%-command|keep%-session.lua|music%-mode.lua|onedrive%-hook.lua|ordered%-chapters%-playlist.lua|playlist%-shuffle.lua|profile%-command.lua|save%-playlist.lua|syncplay%-compat.lua|temp%-profiles.lua|youtube%-search",
         "local_repo": "~~/repos/mpv-scripts"
     },
     {
@@ -18,6 +18,12 @@
         "branch": "scroll-list",
         "whitelist": "%.lua",
         "local_repo": "~~/repos/mpv-menu"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-segment-linking.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua",
+        "local_repo": "~~/repos/mpv-segment-linking"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-search-page.git",
@@ -41,7 +47,7 @@
     {
         "git": "git@github.com:CogentRedTester/mpv-file-browser.git",
         "dest": "~~/script-modules/file-browser-addons/",
-        "whitelist": "addons/ftp|addons/http|addons/favourites|addons/m3u|addons/powershell",
+        "whitelist": "addons/ftp|addons/apache|addons/favourites|addons/m3u|addons/powershell",
         "flatten_folders": true,
         "local_repo":"~~/repos/mpv-file-browser"
     },
@@ -73,7 +79,8 @@
     {
         "git": "git@github.com:CogentRedTester/mpv-user-input.git",
         "dest": "~~/scripts",
-        "whitelist": "user%-input%.lua",
+        "whitelist": "user%-input%.lua|examples/open%-file",
+        "flatten_folders": true,
         "local_repo": "~~/repos/mpv-user-input"
     },
     {

@@ -3,7 +3,7 @@
         "key": "Ctrl+ENTER",
         "command": ["run", "powershell", "-command", "mpv.exe", "%F"],
         "multiselect": true,
-        "multi-type": "append"
+        "multi-type": "concat"
     },
     {
         "key": "Ctrl+c",
@@ -28,8 +28,8 @@
         "key": "INS",
         "command": ["run", "powershell", "-command", "Set-Content", "-LiteralPath", "( %P + '/.ordered-chapters.m3u' )", "-Value", "( %N )"],
         "multiselect": true,
-        "multi-type": "append",
-        "append-string": "+'\n'+"
+        "multi-type": "concat",
+        "concat-string": "+'\n'+"
     },
     {
         "key": "Ctrl+INS",
@@ -79,16 +79,22 @@
         "command": ["print-text", "files: %n"],
         "filter": "file",
         "multiselect": true,
-        "multi-type": "append",
-        "append-string": "\n"
+        "multi-type": "concat",
+        "concat-string": "\n"
     },
     {
         "key": "KP1",
         "command": ["print-text", "directories: %n"],
         "filter": "dir",
         "multiselect": true,
-        "multi-type": "append",
-        "append-string": "\n"
+        "multi-type": "concat",
+        "concat-string": "\n"
+    },
+    {
+        "key": "KP1",
+        "command": ["print-text", "%f"],
+        "passthrough": true,
+        "name": "thing"
     },
     {
         "key": "KP3",
