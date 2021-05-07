@@ -29,7 +29,6 @@
         "git": "git@github.com:CogentRedTester/mpv-search-page.git",
         "dest": "~~/scripts",
         "whitelist": "%.lua",
-        "branch": "user-input",
         "local_repo": "~~/repos/mpv-search-page"
     },
     {
