@@ -52,7 +52,7 @@
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-dvd-browser.git",
-        "dest": "~~/scripts",
+        "dest": "~~/script-modules/file-browser-addons/",
         "whitelist": "%.lua",
         "local_repo": "~~/repos/mpv-dvd-browser"
     },
