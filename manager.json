@@ -46,7 +46,7 @@
     {
         "git": "git@github.com:CogentRedTester/mpv-file-browser.git",
         "dest": "~~/script-modules/file-browser-addons/",
-        "whitelist": "addons/ftp|addons/apache|addons/favourites|addons/m3u|addons/powershell",
+        "whitelist": "addons/ftp|addons/apache|addons/favourites|addons/m3u|addons/powershell|addons/url-decode",
         "flatten_folders": true,
         "local_repo":"~~/repos/mpv-file-browser"
     },
@@ -55,6 +55,12 @@
         "dest": "~~/script-modules/file-browser-addons/",
         "whitelist": "%.lua",
         "local_repo": "~~/repos/mpv-dvd-browser"
+    },
+    {
+        "git": "git@github.com:CogentRedTester/mpv-read-file.git",
+        "dest": "~~/script-modules/",
+        "whitelist": "%.lua",
+        "local_repo": "~~/repos/read-file"
     },
     {
         "git": "git@github.com:CogentRedTester/mpv-sub-select.git",
