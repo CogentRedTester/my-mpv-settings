@@ -46,7 +46,7 @@
     {
         "git": "git@github.com:CogentRedTester/mpv-file-browser.git",
         "dest": "~~/script-modules/file-browser-addons/",
-        "whitelist": "addons/ftp|addons/apache|addons/favourites|addons/m3u|addons/powershell|addons/url-decode",
+        "whitelist": "addons/ftp|addons/apache|addons/favourites|addons/m3u|addons/windir|addons/url%-decode|addons/find",
         "flatten_folders": true,
         "local_repo":"~~/repos/mpv-file-browser"
     },
