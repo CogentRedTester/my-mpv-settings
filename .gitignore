@@ -15,3 +15,4 @@ shaders/*
 .gitmodules
 script-opts/file_browser_favourites
 script-opts/youtube_search.conf
+script-opts/file_browser_favourites.txt

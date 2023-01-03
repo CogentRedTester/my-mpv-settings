@@ -1,6 +1,6 @@
 [
     {
-        "alang": "*",
+        "alang": ["forced", "default"],
         "slang": "forced"
     },
     {
@@ -10,13 +10,11 @@
     },
     {
         "alang": "eng?",
-        "slang": "eng?",
-        "whitelist": [ "sign", "song" ]
-    },
-    {
-        "alang": "eng?",
-        "slang": "und",
-        "whitelist": [ "sign", "song"]
+        "slang": [
+            "eng?",
+            "und"
+        ],
+        "whitelist": [ "sign", "song", "slates" ]
     },
     {
         "alang": ["eng?", "no"],
@@ -24,10 +22,9 @@
     },
     {
         "alang": "*",
-        "slang": "eng?"
-    },
-    {
-        "alang": "*",
-        "slang": "und"
+        "slang": [
+            "eng?",
+            "und"
+        ]
     }
 ]
