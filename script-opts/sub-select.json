@@ -1,11 +1,12 @@
 [
     {
-        "alang": ["forced", "default"],
-        "slang": "forced"
+        "alang": ["eng?", "und"],
+        "slang": ["eng?", "und"],
+        "condition": "sub.forced"
     },
     {
         "alang": "j[ap]n?",
-        "slang": "eng?",
+        "slang": ["eng?", "und"],
         "blacklist": [ "sign" ]
     },
     {
@@ -17,8 +18,13 @@
         "whitelist": [ "sign", "song", "slates" ]
     },
     {
-        "alang": ["eng?", "no"],
+        "alang": "eng?",
         "slang": "no"
+    },
+    {
+        "alang": "*",
+        "slang": "und",
+        "condition": "sub.external and (sub['external-filename'] or ''):lower():find('eng') ~= nil"
     },
     {
         "alang": "*",
@@ -26,5 +32,9 @@
             "eng?",
             "und"
         ]
+    },
+    {
+        "alang": "no",
+        "slang": "no"
     }
 ]
