@@ -6,6 +6,7 @@ repos
 script-opts/dvd_browser.conf
 script-opts/file_browser.conf
 device.conf
+script-modules
 
 shaders/*
 !FSRCNNX_x2_8-0-4-1.glsl
