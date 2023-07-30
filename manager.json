@@ -9,7 +9,7 @@
     {
         "git": "git@github.com:CogentRedTester/mpv-scripts.git",
         "dest": "~~/scripts",
-        "whitelist": "after%-playback.lua|cycle%-commands.lua|editions%-notification.lua|ftp%-compat.lua|input%-command|keep%-session.lua|music%-mode.lua|onedrive%-hook.lua|ordered%-chapters%-playlist.lua|playlist%-shuffle.lua|profile%-command.lua|save%-playlist.lua|syncplay%-compat.lua|temp%-profiles.lua|youtube%-search",
+        "whitelist": "after%-playback.lua|cycle%-commands.lua|display%-name.lua|editions%-notification.lua|ftp%-compat.lua|input%-command|keep%-session.lua|music%-mode.lua|onedrive%-hook.lua|ordered%-chapters%-playlist.lua|playlist%-shuffle.lua|profile%-command.lua|save%-playlist.lua|syncplay%-compat.lua|temp%-profiles.lua|youtube%-search",
         "local_repo": "~~/repos/mpv-scripts"
     },
     {
