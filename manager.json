@@ -38,6 +38,12 @@
         "local_repo": "~~/repos/mpv-coverart"
     },
     {
+        "git": "git@github.com:CogentRedTester/mpv-clipboard.git",
+        "dest": "~~/scripts",
+        "whitelist": "%.lua",
+        "local_repo": "~~/repos/clipboard"
+    },
+    {
         "git": "git@github.com:CogentRedTester/mpv-file-browser.git",
         "dest": "~~/scripts",
         "whitelist": "file%-browser%.lua",
