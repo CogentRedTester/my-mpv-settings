@@ -1,6 +1,6 @@
 [
     {
-        "alang": ["eng?", "und"],
+        "alang": "*",
         "slang": ["eng?", "und"],
         "condition": "sub.forced"
     },
