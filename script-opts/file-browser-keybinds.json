@@ -3,7 +3,8 @@
         "key": "Ctrl+ENTER",
         "command": ["run", "/bin/sh", "-c", "mpv %F"],
         "multiselect": true,
-        "multi-type": "concat"
+        "multi-type": "concat",
+        "condition": "fb.get_platform() ~= 'windows'"
     },
     {
         "key": "Ctrl+c",
@@ -21,18 +22,21 @@
     {
         "key": "Ctrl+o",
         "command": ["run", "dolphin", "%p"],
-        "multiselect": false
+        "multiselect": false,
+        "condition": "fb.get_platform() ~= 'windows'"
     },
     {
         "key": "Ctrl+O",
         "command": ["run", "dolphin", "%f"],
         "filter": "dir",
-        "multiselect": true
+        "multiselect": true,
+        "condition": "fb.get_platform() ~= 'windows'"
     },
     {
         "key": "Ctrl+O",
         "command": ["run", "dolphin", "--select", "%f"],
         "filter": "file",
-        "multiselect": true
+        "multiselect": true,
+        "condition": "fb.get_platform() ~= 'windows'"
     }
 ]
