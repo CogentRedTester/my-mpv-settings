@@ -15,36 +15,6 @@
         "multi-type": "concat",
         "concat-string": "\n"
     },
-    {
-        "key": "Ctrl+v",
-        "command": ["run", "powershell", "-command", "cp", "-LiteralPath", "(Get-Clipboard)", "%P"],
-        "multiselect": false
-    },
-    {
-        "key": "Ctrl+x",
-        "command": ["run", "powershell", "-command", "mv", "-LiteralPath", "(Get-Clipboard)", "%P"],
-        "multiselect": false
-    },
-    {
-        "key": "INS",
-        "command": ["run", "powershell", "-command", "Set-Content", "-LiteralPath", "( %P + '/.ordered-chapters.m3u' )", "-Value", "( %N )"],
-        "multiselect": true,
-        "multi-type": "concat",
-        "concat-string": "+'\n'+"
-    },
-    {
-        "key": "Ctrl+INS",
-        "command": ["run", "powershell", "-command", "rm", "-LiteralPath", "( %P + '/.ordered-chapters.m3u' )", "-Force"],
-        "multiselect": false
-    },
-    {
-        "key": "p",
-        "command": ["script-message-to", "save_playlist", "save-playlist", "%p", ""]
-    },
-    {
-        "key": "P",
-        "command": ["script-message-to", "save_playlist", "save-playlist", "%p", "", "relative"]
-    },
 
 
 
@@ -64,70 +34,5 @@
         "command": ["run", "dolphin", "--select", "%f"],
         "filter": "file",
         "multiselect": true
-    },
-
-
-
-    {
-        "key": "KP1",
-        "command": ["print-text", "files: %n"],
-        "filter": "file",
-        "multiselect": true,
-        "multi-type": "concat",
-        "concat-string": "\n"
-    },
-    {
-        "key": "KP1",
-        "command": ["print-text", "directories: %n"],
-        "filter": "dir",
-        "multiselect": true,
-        "multi-type": "concat",
-        "concat-string": "\n"
-    },
-    {
-        "key": "KP1",
-        "command": ["print-text", "%f"],
-        "passthrough": true,
-        "name": "thing"
-    },
-    {
-        "key": "KP3",
-        "command": ["print-text", "open directory: %p"]
-    },
-    {
-        "key": "KP4",
-        "command": ["print-text", "directory name: %d"]
-    },
-    {
-        "key": "KP9",
-        "command": ["print-text", "%%\n%f\n%n\n%i\n%j\n%x\n%p\n%q\n%d\n%r"]
-    },
-
-
-
-    {
-        "key": "F",
-        "command": ["script-message", "favourites/add_favourite", "%f"]
-    },
-    {
-        "key": "F",
-        "command": ["script-message", "favourites/remove_favourite", "%f"],
-        "parser": "favourites"
-    },
-    {
-        "key": "Ctrl+UP",
-        "command": [
-            ["script-binding", "file_browser/dynamic/scroll_up"],
-            ["script-message", "favourites/move_up", "%f"]
-        ],
-        "parser": "favourites"
-    },
-    {
-        "key": "Ctrl+DOWN",
-        "command": [
-            ["script-binding", "file_browser/dynamic/scroll_down"],
-            ["script-message", "favourites/move_down", "%f"]
-        ],
-        "parser": "favourites"
     }
 ]
